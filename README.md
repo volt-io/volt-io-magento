@@ -25,7 +25,7 @@ Watch the "Pay by Bank" experience in action [here](https://www.volt.io/demos/ch
 ## Installation
 1. Execute the following command in Magento 2 root folder:
 ```shell
-composer require volt/payment // @ToDo
+composer require volt-io/volt-io-magento
 ```
 2. Enter following commands to enable module:
 ```shell

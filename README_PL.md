@@ -1,7 +1,13 @@
 # Volt: Zapłać przez bank -  Magento 2 Moduł płatności
 
 ## Krótki opis
-@ToDo
+Zaoferuj kupującym szybszy i bezpieczniejszy sposób płatności. Dzięki Volt klienci mogą dokonywać płatności bezpośrednio z aplikacji bankowej. Nie jest wymagana karta.
+
+Jak to działa? Po prostu wybierają opcję "Zapłać przez bank" w koszyku, wybierają swój bank i potwierdź szczegóły płatności w swojej bankowości internetowej. "Volt: Zapłać przez bank" pojawi się jako opcja obok metod płatności, które już akceptujesz.
+
+Ponieważ płatności są dokonywane z konta na konto, otrzymasz środki w czasie rzeczywistym i za ułamek kosztów płatności kartą - jednocześnie zapewniając swoim klientom sprawniejszą obsługę płatności.
+
+Sprawdź działanie "Volt: Zapłać przez bank" w akcji [tutaj](https://www.volt.io/demos/checkout/).
 
 ## Podstawowe funkcjonalności
 - Inicjowanie płatności między kontami w całej Europie
@@ -19,7 +25,7 @@
 ## Instalacja
 1. Wykonaj poniższą komendę w katalogu głównym Magento 2:
 ```shell
-composer require volt/payment // @ToDo
+composer require volt-io/volt-io-magento
 ```
 2. Wykonaj poniższe komendy w celu włączenia modułu:
 ```shell
