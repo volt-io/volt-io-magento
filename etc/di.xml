@@ -167,6 +167,13 @@
         </arguments>
     </virtualType>
 
+    <type name="Volt\Payment\Gateway\Validator\Notification\HeaderValidator">
+        <arguments>
+            <argument name="config" xsi:type="object">Volt\Payment\Gateway\Config\Config</argument>
+            <argument name="logger" xsi:type="object">Volt\Payment\Model\Logger\Logger</argument>
+        </arguments>
+    </type>
+
     <!-- Authentication -->
     <type name="Volt\Payment\Gateway\Authentication\Authentication">
         <arguments>

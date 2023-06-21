@@ -15,6 +15,7 @@ class Config extends \Magento\Payment\Gateway\Config\Config
     public const KEY_SANDBOX = 'sandbox';
     public const KEY_CLIENT_ID = 'client_id';
     public const KEY_CLIENT_SECRET = 'client_secret';
+    public const KEY_NOTIFICATION_SECRET = 'notification_secret';
     public const KEY_USERNAME = 'username';
     public const KEY_PASSWORD = 'password';
     public const KEY_PRODUCTION_URL = 'production_url';
@@ -89,6 +90,17 @@ class Config extends \Magento\Payment\Gateway\Config\Config
     public function getClientSecret(int $storeId = null): string
     {
         return (string)$this->getValue(self::KEY_CLIENT_SECRET, $storeId);
+    }
+
+    /**
+     * Get the notification secret used to verify notifications
+     *
+     * @param int|null $storeId
+     * @return string
+     */
+    public function getNotificationSecret(int $storeId = null): string
+    {
+        return (string)$this->getValue(self::KEY_NOTIFICATION_SECRET, $storeId);
     }
 
     /**

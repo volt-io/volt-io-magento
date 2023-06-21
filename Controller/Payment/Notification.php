@@ -12,6 +12,7 @@ use Magento\Framework\Controller\Result\RawFactory;
 use Magento\Framework\Serialize\Serializer\Json;
 use Psr\Log\LoggerInterface;
 use Throwable;
+use Volt\Payment\Exception\NotificationException;
 use Volt\Payment\Gateway\NotificationProcessor;
 
 class Notification implements HttpPostActionInterface, CsrfAwareActionInterface
@@ -88,6 +89,9 @@ class Notification implements HttpPostActionInterface, CsrfAwareActionInterface
                     'content' => $this->request->getContent(),
                 ],
             ]);
+        } catch(NotificationException $e) {
+            $response->setStatusHeader(400);
+            $response->setContents($e->getMessage());
         } catch (Throwable $e) {
             $this->logger->error($e->getMessage(), [
                 'request' => [
@@ -97,7 +101,7 @@ class Notification implements HttpPostActionInterface, CsrfAwareActionInterface
                 ],
             ]);
 
-            $response->setStatusHeader(200);
+            $response->setStatusHeader(400);
             $response->setContents($e->getMessage());
         }
 

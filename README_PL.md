@@ -1,10 +1,14 @@
-# Volt Magento 2 Moduł płatności
+# Volt: Zapłać przez bank -  Magento 2 Moduł płatności
 
 ## Krótki opis
 @ToDo
 
 ## Podstawowe funkcjonalności
-@ToDo
+- Inicjowanie płatności między kontami w całej Europie
+- Rozliczenia w czasie rzeczywistym
+- Inteligentne śledzenie cyklu życia płatności
+- Płatności mobilne automatycznie przekierowują do aplikacji bankowej klienta
+- Płatności stacjonarne za pomocą kodu QR "Skanuj, aby zapłacić"
 
 ### Wymagania
 - Wersja Magento: 2.3.0 - 2.4.6.
@@ -50,6 +54,14 @@ https://your-store-url.com/volt/payment/notification
 12. Podaj swój adres e-mail w polu **Failing notifications alert e-mail**.
 13. Kliknij **Save**.
 
+## Uzyskaj klucz powiadomień
+1. Zaloguj się do [Volt Fuzebox](https://fuzebox.volt.io).
+2. Przejdź do **Configuration** -> **Applications**.
+3. Wybierz aplikację, dla której chcesz uzyskać tajny klucz powiadomień.
+4. Przejdź do zakładki **Payment Notification**.
+5. W sekcji **Notifications** kliknij przycisk **Pokaż** (ikona oka).
+6. Skopiuj klucz powiadomień.
+
 ## Konfiguracja modułu
 1. Zaloguj się do panelu administracyjnego Magento.
 2. Przejdź do **Sklepy (Stores)** > **Konfiguracja (Configuration)**.
@@ -62,6 +74,7 @@ https://your-store-url.com/volt/payment/notification
 3. Ustaw **Tytuł (Title)** na nazwę płatności, która będzie wyświetlana w sklepie.
 4. Ustaw **Sandbox** na **Tak (Yes)** jeśli chcesz używać środowiska testowego.
 5. Ustaw **ID klienta (Client ID)** oraz **Klucz klienta (Client Secret)** na wartości, które otrzymałeś w [Generowaniu danych API](#generowanie-danych-api).
+6. Ustaw **Klucz powiadomień (Notification Secret)** na klucz, który otrzymałeś w [Uzyskaj klucz powiadomień](#uzyskaj-klucz-powiadomień).
 6. Ustaw **Nazwa użytkownika (Username)** oraz **Hasło użytkownika (Password)** użytkownika, którego wykorzystujesz do logowania się do konta [Volt Fuzebox](https://fuzebox.volt.io).
 7. Ustaw **Kolejność sortowania (Sort order)** dla metody płatności.
 8. Możesz zmienić **Status dla oczekującej płatności (Status for pending payment)** na status, który chcesz ustawić dla zamówienia po rozpoczęciu płatności.
@@ -78,5 +91,5 @@ W celu włączenia zwrotów online, musisz mieć aktywną usługę [Volt Connect
 3. Kliknij **Zapisz (Save Config)** na górze strony.
 
 ## Wsparcie
-Jeśli masz jakiekolwiek problemy z tym modułem, otwórz nowy Issue na [GitHub]@ToDo lub skontaktuj się z [@ToDo](supportem).
+Jeśli masz jakiekolwiek problemy z tym modułem, otwórz nowy Issue na [GitHub](https://github.com/volt-io/volt-io-magento/issues).
 
