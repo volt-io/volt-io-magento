@@ -69,7 +69,11 @@ class NotificationProcessor
 
         $data = $subject['params'];
 
-        $status = strtolower($data['status']);
+        $status = strtolower($data['status'] ?? 'testing-fake-notification');
+        if ($status === 'testing-fake-notification') {
+            // Only for testing purposes - Volt sending fake notification without any params.
+            return;
+        }
 
         try {
             $command = $this->commandPool->get($status);
