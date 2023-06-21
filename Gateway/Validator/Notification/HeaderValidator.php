@@ -83,7 +83,6 @@ class HeaderValidator extends AbstractValidator
             'algorithm' => self::ALGORITHM,
             'hash' => $hash,
             'signed' => $signed,
-            'secret' => $this->config->getNotificationSecret(),
         ]);
 
         if ($signed !== $hash) {
