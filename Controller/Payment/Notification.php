@@ -70,10 +70,11 @@ class Notification implements HttpPostActionInterface, CsrfAwareActionInterface
         $response = $this->resultRawFactory->create();
 
         try {
+            $content = $this->request->getContent();
+
             $subject = [
-                'params' => $this->json->unserialize(
-                    $this->request->getContent()
-                ),
+                'body' => $content,
+                'params' => $this->json->unserialize($content),
                 'headers' => $this->request->getHeaders()->toArray(),
             ];
 
@@ -92,6 +93,14 @@ class Notification implements HttpPostActionInterface, CsrfAwareActionInterface
         } catch(NotificationException $e) {
             $response->setStatusHeader(400);
             $response->setContents($e->getMessage());
+
+            $this->logger->error($e->getMessage(), [
+                'request' => [
+                    'uri' => $this->request->getRequestUri(),
+                    'headers' => $this->request->getHeaders()->toArray(),
+                    'content' => $this->request->getContent(),
+                ],
+            ]);
         } catch (Throwable $e) {
             $this->logger->error($e->getMessage(), [
                 'request' => [

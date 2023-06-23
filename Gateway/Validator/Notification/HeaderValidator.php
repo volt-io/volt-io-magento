@@ -56,13 +56,7 @@ class HeaderValidator extends AbstractValidator
             ]);
         }
 
-        $body = $validationSubject['request']['content'] ?? '{}';
-
-        if (!$body) {
-            return $this->createResult(false, [
-                'Missing body'
-            ]);
-        }
+        $body = $validationSubject['body'] ?? '{}';
 
         $data = implode(self::DELIMITER,
             [
