@@ -9,8 +9,9 @@ class ZendAdapter implements AdapterInterface
     /** @var \Magento\Framework\HTTP\ZendClient */
     protected $client;
 
-    public function __construct(\Magento\Framework\HTTP\ZendClient $client)
-    {
+    public function __construct(
+        \Magento\Framework\HTTP\ZendClient $client
+    ) {
         $this->client = $client;
     }
 

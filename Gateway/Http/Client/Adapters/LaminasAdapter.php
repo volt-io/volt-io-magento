@@ -4,21 +4,22 @@ declare(strict_types=1);
 
 namespace Volt\Payment\Gateway\Http\Client\Adapters;
 
-use Magento\Framework\HTTP\LaminasClient;
+use Magento\Framework\ObjectManagerInterface;
 
 class LaminasAdapter implements AdapterInterface
 {
-    /** @var LaminasClient */
+    /** @var \Magento\Framework\HTTP\LaminasClient */
     protected $client;
 
     public function __construct(
-        LaminasClient $client
+        ObjectManagerInterface $objectManager
     ) {
-        $this->client = $client;
+        // We need to get by object manager to be compatible with Magento 2.3
+        $this->client = $objectManager->get('Magento\\Framework\\HTTP\\LaminasClient');
 
         // We cannot use \Magento\Framework\HTTP\Adapter\Curl::class - which has problem with headers params.
         $this->client->setOptions([
-            'adapter' => \Laminas\Http\Client\Adapter\Curl::class,
+            'adapter' => 'Laminas\\Http\\Client\\Adapter\\Curl',
         ]);
     }
 
