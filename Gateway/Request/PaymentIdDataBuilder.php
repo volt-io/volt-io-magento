@@ -22,10 +22,23 @@ class PaymentIdDataBuilder implements BuilderInterface
 
     public function build(array $buildSubject): array
     {
-        $reference = substr(md5(microtime()),rand(0, 26),self::REFERENCE_LENGTH);
+        $reference = $this->generateRandomString(self::REFERENCE_LENGTH);
 
         return [
             self::UNIQUE_REFERENCE => $reference,
         ];
     }
+
+    private function generateRandomString($length = 18): string
+    {
+        // Copyright - https://stackoverflow.com/questions/4356289/php-random-string-generator
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[random_int(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
 }
