@@ -16,6 +16,9 @@ Watch the "Pay by Bank" experience in action [here](https://www.volt.io/demos/ch
 - Mobile payments automatically redirect to customer’s banking app
 - Desktop payments redirect via a "Scan to pay" QR code
 
+#### Limitations
+- Module is not available for multishipping checkout.
+
 ### Requirements
 - Magento version: 2.3.0 - 2.4.6.
 - PHP version according to the requirements of your store version.

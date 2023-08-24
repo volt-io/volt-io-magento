@@ -16,6 +16,9 @@ Sprawdź działanie "Volt: Zapłać przez bank" w akcji [tutaj](https://www.volt
 - Płatności mobilne automatycznie przekierowują do aplikacji bankowej klienta
 - Płatności stacjonarne za pomocą kodu QR "Skanuj, aby zapłacić"
 
+#### Ograniczenia
+- Moduł nie jest dostępny dla wysyłki na wiele adresów (multishipping).
+
 ### Wymagania
 - Wersja Magento: 2.3.0 - 2.4.6.
 - Wersja PHP zgodna z wymaganiami Magento.
