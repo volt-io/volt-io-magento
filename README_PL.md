@@ -46,7 +46,7 @@ bin/magento cache:flush
 4. Podaj **Application Name** i wybierz **Customer**, który ma być używany dla sklepu.
 5. W polach **Payment return URLs** podaj następujący adres dla wszystkich statusów (zamień `your-store-url.com` na adres swojego sklepu):
 ```
-https://your-store-url.com/volt/payment/return
+https://your-store-url.com/volt/payment/back
 ```
 6. W polach **Verify return URLs** podaj następujący adres dla wszystkich statusów (zamień `your-store-url.com` na adres swojego sklepu):
 ```

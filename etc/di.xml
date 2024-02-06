@@ -53,11 +53,16 @@
                 <item name="pending" xsi:type="string">Volt\Payment\Gateway\Command\PaymentPending</item>
                 <item name="delayed_at_bank" xsi:type="string">Volt\Payment\Gateway\Command\PaymentPending</item>
                 <item name="completed" xsi:type="string">Volt\Payment\Gateway\Command\PaymentPending</item>
+                <item name="bank_redirect" xsi:type="string">Volt\Payment\Gateway\Command\PaymentPending</item>
+                <item name="awaiting_checkout_authorization" xsi:type="string">Volt\Payment\Gateway\Command\PaymentPending</item>
                 <item name="failed" xsi:type="string">Volt\Payment\Gateway\Command\PaymentFailed</item>
                 <item name="refused_by_bank" xsi:type="string">Volt\Payment\Gateway\Command\PaymentFailed</item>
                 <item name="error_at_bank" xsi:type="string">Volt\Payment\Gateway\Command\PaymentFailed</item>
                 <item name="cancelled_by_user" xsi:type="string">Volt\Payment\Gateway\Command\PaymentFailed</item>
                 <item name="abandoned" xsi:type="string">Volt\Payment\Gateway\Command\PaymentFailed</item>
+                <item name="refused_by_risk" xsi:type="string">Volt\Payment\Gateway\Command\PaymentFailed</item>
+                <item name="not_received" xsi:type="string">Volt\Payment\Gateway\Command\PaymentFailed</item>
+                <item name="abandoned_by_user" xsi:type="string">Volt\Payment\Gateway\Command\PaymentFailed</item>
                 <item name="received" xsi:type="string">Volt\Payment\Gateway\Command\PaymentReceived</item>
                 <item name="refund_confirmed" xsi:type="string">Volt\Payment\Gateway\Command\RefundConfirmed</item>
                 <item name="refund_failed" xsi:type="string">Volt\Payment\Gateway\Command\RefundFailed</item>
