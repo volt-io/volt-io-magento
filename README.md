@@ -46,7 +46,7 @@ bin/magento cache:flush
 4. Enter the **Application Name** and select **Customer** you want to use.
 5. For **Payment return URLs** enter the following URL for all statuses (replace `your-store-url.com` with your store URL):
 ```
-https://your-store-url.com/volt/payment/return
+https://your-store-url.com/volt/payment/back
 ```
 6. For **Verify return URLs** enter the following URL (replace `your-store-url.com` with your store URL):
 ```
