@@ -8,6 +8,7 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Controller\Result\Redirect;
+use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Message\ManagerInterface as MessageManagerInterface;
 use Magento\Framework\Serialize\Serializer\Json;
 use Psr\Log\LoggerInterface;
@@ -98,7 +99,7 @@ class Back implements HttpGetActionInterface
      * @param $data
      * @return Redirect
      */
-    private function prepareResponseForPending($data): Redirect
+    private function prepareResponseForPending($data): ResultInterface
     {
         $result = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
         $result->getConfig()->getTitle()->set(__('Waiting for payment confirmation'));
