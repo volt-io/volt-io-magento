@@ -1,5 +1,7 @@
 # Volt: Pay by Bank - Magento 2 Payment Module
 
+**Version for Magento 2.3 - 2.4. For module compatible with Magento 2.2 check out [here](https://github.com/volt-io/volt-io-magento-22).**
+
 ## Description
 Offer shoppers a faster, safer way to pay. With Volt, your customers can check out directly from their banking app. No card required.
 
