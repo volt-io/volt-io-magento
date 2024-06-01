@@ -63,7 +63,6 @@ class VoltClient implements ClientInterface
             'headers' => $transferObject->getHeaders(),
             'request' => $transferObject->getBody(),
             'request_uri' => $transferObject->getUri(),
-            'headers' => $transferObject->getHeaders(),
         ];
         $result = [];
         $client = $this->clientFactory->create();
