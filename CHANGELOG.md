@@ -1,5 +1,8 @@
 # What changed in Volt: Pay by Bank Module?
 
+## 1.1.2
+* Fixes for wrong return type in Back controller.
+
 ## 1.1.1
 * Fixes for CRON and ABANDONED_BY_USER statuses.
 * Make inputs for credientals in the configuration obscure (showing *** instead of plain text).
