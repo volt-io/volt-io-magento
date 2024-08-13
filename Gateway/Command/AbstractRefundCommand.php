@@ -17,8 +17,8 @@ use Volt\Payment\Model\Repository\TransactionRepository;
 
 abstract class AbstractRefundCommand extends AbstractPaymentCommand implements CommandInterface
 {
-    public const KEY_REFUND_ID = 'refundId';
-    public const KEY_PAYMENT_ID = 'paymentId';
+    public const KEY_REFUND = 'refund';
+    public const KEY_PAYMENT = 'payment';
     public const KEY_AMOUNT = 'amount';
     public const KEY_CURRENCY = 'currency';
     public const KEY_STATUS = 'status';
@@ -32,7 +32,7 @@ abstract class AbstractRefundCommand extends AbstractPaymentCommand implements C
      */
     protected function getTransaction(array $commandSubject): ?TransactionInterface
     {
-        $txnId = $commandSubject[self::KEY_PAYMENT_ID];
+        $txnId = $commandSubject[self::KEY_PAYMENT];
 
         return $this->transactionRepository->getByTxnId($txnId);
     }
@@ -56,8 +56,8 @@ abstract class AbstractRefundCommand extends AbstractPaymentCommand implements C
     protected function getComment(array $commandSubject): string
     {
         $comment = '[Volt: Pay by Bank] Received refund notification';
-        $comment .= ' - Refund ID: ' . $commandSubject[self::KEY_REFUND_ID];
-        $comment .= ' - Payment ID: ' . $commandSubject[self::KEY_PAYMENT_ID];
+        $comment .= ' - Refund ID: ' . $commandSubject[self::KEY_REFUND];
+        $comment .= ' - Payment ID: ' . $commandSubject[self::KEY_PAYMENT];
         $comment .= ' - Amount: ' . $commandSubject[self::KEY_AMOUNT];
         $comment .= ' - Currency: ' . $commandSubject[self::KEY_CURRENCY];
         $comment .= ' - Status: ' . $commandSubject[self::KEY_STATUS];

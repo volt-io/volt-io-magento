@@ -1,5 +1,8 @@
 # What changed in Volt: Pay by Bank Module?
 
+## 1.1.3
+* Fixes for wrong refund processing.
+
 ## 1.1.2
 * Fixes for wrong return type in Back controller.
 
